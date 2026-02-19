@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PetPal - Adoption Center</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🐾 PetPal Adoption Center</h1>
+</header>
+
+<section class="pet-container">
+
+    <!-- Dog -->
+    <div class="card dog">
+        <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d">
+        <h3>🐶 Dog</h3>
+        <p>Breed: Labrador | Age: 2 Years</p>
+        <p>Health: Vaccinated, No issues</p>
+        <p class="price">₹8,000</p>
+        <button onclick="adoptPet('Dog')">Adopt</button>
+    </div>
+
+    <!-- Cat -->
+    <div class="card cat">
+        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131">
+        <h3>🐱 Cat</h3>
+        <p>Breed: Persian | Age: 1 Year</p>
+        <p>Health: Mild allergy</p>
+        <p class="price">₹5,000</p>
+        <button onclick="adoptPet('Cat')">Adopt</button>
+    </div>
+
+    <!-- Hamster -->
+    <div class="card hamster">
+        <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c">
+        <h3>🐹 Hamster</h3>
+        <p>Breed: Syrian | Age: 6 Months</p>
+        <p>Health: Healthy</p>
+        <p class="price">₹800</p>
+        <button onclick="adoptPet('Hamster')">Adopt</button>
+    </div>
+
+    <!-- Parrot -->
+    <div class="card parrot">
+        <img src="https://images.unsplash.com/photo-1501706362039-c6e80948b3c4">
+        <h3>🦜 Parrot</h3>
+        <p>Breed: African Grey | Age: 1.5 Years</p>
+        <p>Health: Wing injury recovered</p>
+        <p class="price">₹12,000</p>
+        <button onclick="adoptPet('Parrot')">Adopt</button>
+    </div>
+
+    <!-- Love Birds -->
+    <div class="card lovebirds">
+        <img src="https://images.unsplash.com/photo-1591198936750-16d8e15edb9e">
+        <h3>💖 Love Birds</h3>
+        <p>Breed: Peach-faced | Age: 8 Months</p>
+        <p>Health: Healthy Pair</p>
+        <p class="price">₹3,000 (Pair)</p>
+        <button onclick="adoptPet('Love Birds')">Adopt</button>
+    </div>
+
+    <!-- Rabbit -->
+    <div class="card rabbit">
+        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e">
+        <h3>🐰 Rabbit</h3>
+        <p>Breed: Angora | Age: 1 Year</p>
+        <p>Health: Healthy</p>
+        <p class="price">₹2,500</p>
+        <button onclick="adoptPet('Rabbit')">Adopt</button>
+    </div>
+
+    <!-- Fish -->
+    <div class="card fish">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+        <h3>🐠 Fish</h3>
+        <p>Breed: Goldfish | Age: 4 Months</p>
+        <p>Health: Healthy</p>
+        <p class="price">₹500</p>
+        <button onclick="adoptPet('Fish')">Adopt</button>
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+style.css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+}
+
+header {
+    background: #ff6f61;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.pet-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    width: 250px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card p {
+    margin: 5px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Pet Colors */
+
+.dog { background: linear-gradient(to right, #f7971e, #ffd200); }
+.cat { background: linear-gradient(to right, #8e2de2, #4a00e0); }
+.hamster { background: linear-gradient(to right, #ff9966, #ff5e62); }
+.parrot { background: linear-gradient(to right, #56ab2f, #a8e063); }
+.lovebirds { background: linear-gradient(to right, #ff758c, #ff7eb3); }
+.rabbit { background: linear-gradient(to right, #00c6ff, #0072ff); }
+.fish { background: linear-gradient(to right, #2193b0, #6dd5ed); }
+
+button {
+    background: white;
+    color: black;
+    border: none;
+    padding: 8px 15px;
+    margin: 15px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: black;
+    color: white;
+}
+
+javascript
+function adoptPet(petName) {
+    alert(
+        "Adoption Details for " + petName + ":\n\n" +
+        "• Adoption Fee must be paid.\n" +
+        "• Valid ID proof required.\n" +
+        "• Home visit verification.\n" +
+        "• Proper pet care commitment.\n\n" +
+        "Thank you for choosing adoption ❤️"
+    );
+}
+function adoptPet(petName) {
+    alert(
+        "Adoption Details for " + petName + ":\n\n" +
+        "• Adoption Fee must be paid.\n" +
+        "• Valid ID proof required.\n" +
+        "• Home visit verification.\n" +
+        "• Proper pet care commitment.\n\n" +
+        "Thank you for choosing adoption ❤️"
+    );
+}
